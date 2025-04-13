@@ -1,0 +1,118 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 142 68% 98%;
+    --foreground: 144 64% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 144 64% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 144 64% 10%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 144 70% 98%;
+
+    --secondary: 142 14% 94%;
+    --secondary-foreground: 144 62% 20%;
+
+    --muted: 142 14% 94%;
+    --muted-foreground: 144 32% 46%;
+
+    --accent: 142 14% 94%;
+    --accent-foreground: 144 62% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 142 12% 90%;
+    --input: 142 12% 90%;
+    --ring: 142 76% 36%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 144 48% 98%;
+    --sidebar-foreground: 144 64% 20%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 142 14% 94%;
+    --sidebar-accent-foreground: 144 64% 20%;
+    --sidebar-border: 142 12% 90%;
+    --sidebar-ring: 142 76% 36%;
+  }
+
+  .dark {
+    --background: 144 64% 5%;
+    --foreground: 142 14% 94%;
+
+    --card: 144 64% 5%;
+    --card-foreground: 142 14% 94%;
+
+    --popover: 144 64% 5%;
+    --popover-foreground: 142 14% 94%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 144 70% 98%;
+
+    --secondary: 144 41% 12%;
+    --secondary-foreground: 142 14% 94%;
+
+    --muted: 144 41% 12%;
+    --muted-foreground: 144 24% 66%;
+
+    --accent: 144 41% 12%;
+    --accent-foreground: 142 14% 94%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 144 41% 12%;
+    --input: 144 41% 12%;
+    --ring: 142 76% 36%;
+
+    --sidebar-background: 144 41% 12%;
+    --sidebar-foreground: 142 14% 94%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 144 16% 15%;
+    --sidebar-accent-foreground: 142 14% 94%;
+    --sidebar-border: 144 16% 15%;
+    --sidebar-ring: 142 76% 36%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* RTL Support for Arabic */
+  .rtl {
+    direction: rtl;
+    text-align: right;
+  }
+
+  .ltr {
+    direction: ltr;
+    text-align: left;
+  }
+}
+
+@layer components {
+  .hover-effect {
+    @apply transition-all duration-300 hover:shadow-md hover:bg-secondary;
+  }
+
+  .dashboard-card {
+    @apply rounded-lg shadow-md bg-card p-4 border border-border hover-effect;
+  }
+}
