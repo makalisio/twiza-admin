@@ -17,9 +17,11 @@ type TranslationKey =
   | 'settings'
   | 'logout'
   | 'adminLogin.title'
+  | 'adminLogin.welcome'
   | 'adminLogin.email'
   | 'adminLogin.emailPlaceholder'
   | 'adminLogin.password'
+  | 'adminLogin.passwordPlaceholder'
   | 'adminLogin.forgotPassword'
   | 'adminLogin.signIn'
   | 'adminLogin.emailRequired'
@@ -40,7 +42,6 @@ type TranslationKey =
   | 'login.emailPlaceholder'
   | 'login.emailInvalid'
   | 'login.password'
-  | 'login.passwordPlaceholder'
   | 'login.passwordLength'
   | 'login.signIn'
   | 'login.showPassword'
@@ -90,12 +91,14 @@ const locales: Record<Locale, Record<TranslationKey, string>> = {
     settings: 'Paramètres',
     logout: 'Déconnexion',
     'adminLogin.title': 'Connexion Administrateur',
+    'adminLogin.welcome': "Bienvenue sur la plateforme d'administration Twiza",
     'adminLogin.email': 'Email',
-    'adminLogin.emailPlaceholder': 'admin@twiza.org',
+    'adminLogin.emailPlaceholder': 'Entrez votre email',
     'adminLogin.password': 'Mot de passe',
+    'adminLogin.passwordPlaceholder': 'Entrez votre mot de passe',
     'adminLogin.forgotPassword': 'Mot de passe oublié ?',
-    'adminLogin.signIn': 'Se connecter',
-    'adminLogin.emailRequired': 'L\'email est requis',
+    'adminLogin.signIn': 'Connexion',
+    'adminLogin.emailRequired': "L'email est requis",
     'adminLogin.passwordRequired': 'Le mot de passe est requis',
     'adminLogin.invalidEmail': 'Email invalide',
     'forgotPassword.title': 'Réinitialisation du mot de passe',
@@ -113,7 +116,6 @@ const locales: Record<Locale, Record<TranslationKey, string>> = {
     'login.emailPlaceholder': 'Entrez votre email',
     'login.emailInvalid': 'Format d\'email invalide',
     'login.password': 'Mot de passe',
-    'login.passwordPlaceholder': 'Entrez votre mot de passe',
     'login.passwordLength': 'Le mot de passe doit contenir au moins 6 caractères',
     'login.signIn': 'Se connecter',
     'login.showPassword': 'Afficher le mot de passe',
@@ -155,9 +157,11 @@ const locales: Record<Locale, Record<TranslationKey, string>> = {
     settings: 'Settings',
     logout: 'Logout',
     'adminLogin.title': 'Administrator Login',
+    'adminLogin.welcome': 'Welcome to Twiza Admin Platform',
     'adminLogin.email': 'Email',
-    'adminLogin.emailPlaceholder': 'admin@twiza.org',
+    'adminLogin.emailPlaceholder': 'Enter your email',
     'adminLogin.password': 'Password',
+    'adminLogin.passwordPlaceholder': 'Enter your password',
     'adminLogin.forgotPassword': 'Forgot password?',
     'adminLogin.signIn': 'Sign in',
     'adminLogin.emailRequired': 'Email is required',
@@ -178,7 +182,6 @@ const locales: Record<Locale, Record<TranslationKey, string>> = {
     'login.emailPlaceholder': 'Enter your email',
     'login.emailInvalid': 'Invalid email format',
     'login.password': 'Password',
-    'login.passwordPlaceholder': 'Enter your password',
     'login.passwordLength': 'Password must be at least 6 characters',
     'login.signIn': 'Sign In',
     'login.showPassword': 'Show password',
@@ -220,9 +223,11 @@ const locales: Record<Locale, Record<TranslationKey, string>> = {
     settings: 'الإعدادات',
     logout: 'تسجيل الخروج',
     'adminLogin.title': 'تسجيل دخول المسؤول',
+    'adminLogin.welcome': 'مرحبا بكم في منصة إدارة تويزا',
     'adminLogin.email': 'البريد الإلكتروني',
-    'adminLogin.emailPlaceholder': 'admin@twiza.org',
+    'adminLogin.emailPlaceholder': 'أدخل بريدك الإلكتروني',
     'adminLogin.password': 'كلمة المرور',
+    'adminLogin.passwordPlaceholder': 'أدخل كلمة المرور',
     'adminLogin.forgotPassword': 'نسيت كلمة المرور؟',
     'adminLogin.signIn': 'تسجيل الدخول',
     'adminLogin.emailRequired': 'البريد الإلكتروني مطلوب',
@@ -243,7 +248,6 @@ const locales: Record<Locale, Record<TranslationKey, string>> = {
     'login.emailPlaceholder': 'أدخل بريدك الإلكتروني',
     'login.emailInvalid': 'صيغة البريد الإلكتروني غير صالحة',
     'login.password': 'كلمة المرور',
-    'login.passwordPlaceholder': 'أدخل كلمة المرور',
     'login.passwordLength': 'يجب أن تحتوي كلمة المرور على 6 أحرف على الأقل',
     'login.signIn': 'تسجيل الدخول',
     'login.showPassword': 'إظهار كلمة المرور',
